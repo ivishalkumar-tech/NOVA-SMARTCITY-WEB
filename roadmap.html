@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA | Citizen Roadmap & Innovation Portal</title>
+    <link rel="stylesheet" href="roadmap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Animated Background Cyber Grid -->
+    <div class="cyber-grid-bg"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-glow">N O V A</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech & Luxury</a>
+                <a href="environment.html">Environment</a>
+                <a href="roadmap.html" class="active">Roadmap</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Roadmap Hero Section -->
+    <section class="roadmap-hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <span class="badge">Evolutionary Trajectory</span>
+            <h1>From Grassroots Action to <span class="gradient-text">Metropolis 2085</span></h1>
+            <p>Transforming today's urban centers into NOVA requires a synchronized leap—bridging individual daily sustainable habits with macro-scale futuristic engineering.</p>
+        </div>
+    </section>
+
+    <!-- Interactive Roadmap Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Four-Phase Transition Matrix</h2>
+                <p class="section-subtitle">Trace how personal everyday commitments scale into planetary-grade equilibrium.</p>
+            </div>
+
+            <div class="timeline-container">
+                
+                <!-- Timeline Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 1 // 2026 – 2035</span>
+                        <h3>Micro-Green Living & Urban Biophilia</h3>
+                        <p><strong>Individual Action:</strong> Cultivating balcony gardens, indoor air-filtering flora, and participating in neighborhood tree-planting drives.</p>
+                        <div class="timeline-scale">Scale Transition $\rightarrow$ Bio-Luminescent Vertical Forests (2085)</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 2 // 2036 – 2050</span>
+                        <h3>Household Zero-Waste & Composting</h3>
+                        <p><strong>Individual Action:</strong> Strict segregation of organic refuse, eliminating single-use plastics, and adopting localized composting systems.</p>
+                        <div class="timeline-scale">Scale Transition $\rightarrow$ Sub-Surface Sub-Atomic Waste Digesters (2085)</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 3 // 2051 – 2065</span>
+                        <h3>Active Mobility & Public Transit Pledges</h3>
+                        <p><strong>Individual Action:</strong> Prioritizing pedestrian walkways, cycling infrastructure, and transitioning entirely to zero-emission electric communal transit.</p>
+                        <div class="timeline-scale">Scale Transition $\rightarrow$ Magnetic Levitation & Combustion-Free Grid (2085)</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-phase">Phase 4 // 2066 – 2085</span>
+                        <h3>Decentralized Energy & Closed-Loop Living</h3>
+                        <p><strong>Individual Action:</strong> Installing rooftop solar skins, harvesting atmospheric condensation, and minimizing personal carbon footprints to absolute zero.</p>
+                        <div class="timeline-scale">Scale Transition $\rightarrow$ 100% Autonomous Zero-Pollution Metropolis (2085)</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Citizen Innovation & Suggestion Portal Form -->
+    <section class="portal-section">
+        <div class="container">
+            <div class="portal-card">
+                <div class="section-header">
+                    <h2>Citizen Innovation Portal</h2>
+                    <p class="section-subtitle">Have a disruptive blueprint or eco-tech idea? Submit your proposal to be vetted by NOVA's central intelligence network.</p>
+                </div>
+
+                <form id="innovationForm" class="innovation-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="citizenName">Full Name</label>
+                            <input type="text" id="citizenName" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="citizenEmail">Email Address (Secure)</label>
+                            <input type="email" id="citizenEmail" required placeholder="name@domain.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ecoCategory">Innovation Sector</label>
+                        <select id="ecoCategory" required>
+                            <option value="" disabled selected>Select category...</option>
+                            <option value="Forests">Vertical Forests & Flora</option>
+                            <option value="Air">Air Purification & Spires</option>
+                            <option value="Water">Hydro Systems & Conservation</option>
+                            <option value="Waste">Zero-Waste & Circular Loops</option>
+                            <option value="Transit">Maglev & Transit Systems</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposalText">Your Blueprint / Idea Description</label>
+                        <textarea id="proposalText" rows="4" required placeholder="Describe your sustainability mechanism or urban transformation concept..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Transmit Proposal to NOVA Core</button>
+                </form>
+
+                <!-- Success Feedback Message -->
+                <div id="formSuccess" class="form-success hidden">
+                    <h3>Transmission Successful</h3>
+                    <p>Your proposal has been logged, encrypted, and filtered into the NOVA Innovation Database. We will reach out via your secure email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">N O V A</div>
+            <p>&copy; 2026 City of NOVA Project. Evolutionary Trajectory & Citizen Portal.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech & Luxury</a>
+                <a href="environment.html">Environment</a>
+                <a href="roadmap.html">Roadmap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Basic JavaScript for Form Handling & Filtering -->
+    <script src="roadmap.js"></script>
+</body>
+</html>

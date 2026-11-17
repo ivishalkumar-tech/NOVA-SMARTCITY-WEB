@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA | Zero-Pollution Futuristic Metropolis</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Animated Background Cyber Grid -->
+    <div class="cyber-grid-bg"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-glow">N O V A</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="tech.html">Tech & Luxury</a>
+                <a href="environment.html">Environment</a>
+                <a href="roadmap.html">Roadmap</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Functional Search Bar & Video CTA -->
+    <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <span class="badge">Metropolis Operating System v9.8</span>
+            <h1>Welcome to <span class="gradient-text">NOVA City</span></h1>
+            <p>A zero-pollution, carbon-negative metropolis governed by quantum intelligence, biophotonic architecture, and seamless eco-luxury.</p>
+            
+            <!-- Futuristic City Video Redirect Button (2+ Minutes Showcase) -->
+            <div class="hero-cta-group">
+                <a href="https://youtu.be/V328AMkg5XQ?si=64-BNq6-FMfr2GJL" target="_blank" rel="noopener noreferrer" class="video-cta-btn">
+                    <span class="play-icon">▶</span> Watch NOVA Metropolis Vision
+                </a>
+            </div>
+
+            <!-- Functional Live Search Bar -->
+            <div class="search-wrapper">
+                <div class="search-input-box">
+                    <input type="text" id="citySearchInput" placeholder="Search NOVA sectors (e.g., Hospital, Ambulance, Ed-Tech, Energy, Eco)..." autocomplete="off">
+                    <button type="button" id="clearSearchBtn" class="clear-search-btn hidden" aria-label="Clear search">✕</button>
+                </div>
+                <div id="searchIndicator" class="search-indicator">Type to filter sectors</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Sectors / Modules Grid -->
+    <section class="sectors-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Metropolitan Infrastructure Sectors</h2>
+                <p class="section-subtitle">Explore NOVA's primary autonomous operational zones.</p>
+            </div>
+
+            <div id="sectorsGrid" class="sectors-grid">
+
+                <!-- Card 1: Environment -->
+                <div class="sector-card" data-keywords="environment eco forest green waste water aqi air purification spires climate nature">
+                    <div class="card-glow"></div>
+                    <div class="sector-tag">SECTOR 01 // ECO</div>
+                    <h3>Ecological Matrix</h3>
+                    <p>Bio-luminescent vertical rainforests, molecular air purification spires, and closed-loop hydro-purification basins.</p>
+                    <a href="environment.html" class="sector-link">Access Matrix →</a>
+                </div>
+
+                <!-- Card 2: Tech, Luxury, Healthcare & Education -->
+                <div class="sector-card" data-keywords="tech luxury ai quantum energy homes hospital hospitals healthcare medical family comfort education ed-tech academy study learning holodeck penthouses">
+                    <div class="card-glow"></div>
+                    <div class="sector-tag">SECTOR 02 // TECH & CARE</div>
+                    <h3>Tech, Healthcare & Ed-Tech</h3>
+                    <p>Zero-point fusion grids, Quantum Care biophilic hospitals, neural-immersive study academies, and smart luxury habitats.</p>
+                    <a href="tech.html" class="sector-link">Access Tech & Care →</a>
+                </div>
+
+                <!-- Card 3: Transit & 24/7 Emergency Grid -->
+                <div class="sector-card" data-keywords="transit transport maglev travel roads ambulance emergency 24/7 rapid response petrol fuel hubs sky-tram drone">
+                    <div class="card-glow"></div>
+                    <div class="sector-tag">SECTOR 03 // TRANSIT & GRID</div>
+                    <h3>Maglev & 24/7 Emergency Grid</h3>
+                    <p>Frictionless magnetic levitation pods, aerial sky-trams, and 24/7 autonomous ambulance hubs stationed at fuel and civic centers.</p>
+                    <a href="tech.html" class="sector-link">Explore Grid →</a>
+                </div>
+
+                <!-- Card 4: Roadmap -->
+                <div class="sector-card" data-keywords="roadmap evolution citizen innovation 2085 timeline future phases development">
+                    <div class="card-glow"></div>
+                    <div class="sector-tag">SECTOR 04 // EVOLUTION</div>
+                    <h3>Evolutionary Roadmap</h3>
+                    <p>The four-phase transition timeline from individual grassroots action to full 2085 planetary equilibrium.</p>
+                    <a href="roadmap.html" class="sector-link">View Timeline →</a>
+                </div>
+
+            </div>
+
+            <!-- No Results State -->
+            <div id="noResults" class="no-results hidden">
+                <p>No matching sector found in NOVA database. Try searching for "Eco", "Hospital", "Ambulance", "Ed-Tech", or "Transit".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">N O V A</div>
+            <p>&copy; 2026 City of NOVA Project. Designed for B.Tech CSE Architecture.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech & Luxury</a>
+                <a href="environment.html">Environment</a>
+                <a href="roadmap.html">Roadmap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="index.js"></script>
+</body>
+</html>

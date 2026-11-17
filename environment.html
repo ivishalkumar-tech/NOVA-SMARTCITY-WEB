@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA | Ecological & Environmental Matrix</title>
+    <link rel="stylesheet" href="environment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Animated Background Cyber Grid -->
+    <div class="cyber-grid-bg"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-glow">N O V A</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech & Luxury</a>
+                <a href="environment.html" class="active">Environment</a>
+                <a href="roadmap.html">Roadmap</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Environment Hero Section -->
+    <section class="env-hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <span class="badge">Zero-Pollution Eco Framework</span>
+            <h1>Ecological <span class="gradient-text">Harmony Matrix</span></h1>
+            <p>An exhaustive architectural repository of NOVA's carbon-negative ecosystems, bio-luminescent vertical forests, molecular air purification towers, and closed-loop natural sustainability protocols.</p>
+        </div>
+    </section>
+
+    <!-- Live AQI & Pollution Tracking Banner -->
+    <section class="aqi-banner-section">
+        <div class="aqi-container">
+            <div class="aqi-card">
+                <span class="aqi-number">001</span>
+                <span class="aqi-label">Metropolis AQI (Pristine)</span>
+            </div>
+            <div class="aqi-card">
+                <span class="aqi-number">0.00</span>
+                <span class="aqi-label">Carbon PPM Level</span>
+            </div>
+            <div class="aqi-card">
+                <span class="aqi-number">100%</span>
+                <span class="aqi-label">Pure Oxygen Index</span>
+            </div>
+            <div class="aqi-card">
+                <span class="aqi-number">0</span>
+                <span class="aqi-label">Harmful Particulates</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pure CSS Eco-Zone Filter Section -->
+    <section class="env-matrix-section">
+        <div class="container">
+            
+            <!-- Hidden Radio Inputs for Pure CSS Filtering -->
+            <input type="radio" name="env-filter" id="filter-all" checked class="filter-input">
+            <input type="radio" name="env-filter" id="filter-forests" class="filter-input">
+            <input type="radio" name="env-filter" id="filter-air" class="filter-input">
+            <input type="radio" name="env-filter" id="filter-water" class="filter-input">
+            <input type="radio" name="env-filter" id="filter-waste" class="filter-input">
+
+            <!-- Filter Buttons Navigation -->
+            <div class="filter-tabs">
+                <label for="filter-all" class="tab-btn">All Ecosystems</label>
+                <label for="filter-forests" class="tab-btn">Vertical Forests</label>
+                <label for="filter-air" class="tab-btn">Air Purification</label>
+                <label for="filter-water" class="tab-btn">Hydro Systems</label>
+                <label for="filter-waste" class="tab-btn">Zero-Waste Loops</label>
+            </div>
+
+            <!-- Bulky Ecological Content Grid with Photos -->
+            <div class="matrix-grid">
+
+                <!-- Module 1: Forests -->
+                <div class="matrix-card" data-zone="forests">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80" alt="Bio-Luminescent Vertical Rainforest">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // 100% GREEN</div>
+                    <h3>Bio-Luminescent Vertical Rainforests</h3>
+                    <p>Towering residential skyscrapers integrated with genetically enhanced flora that absorb ambient carbon dioxide by day and emit soft, sustainable illumination along public walkways by night.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Carbon Absorption:</span> 450 Tons/Day</div>
+                        <div class="spec-item"><span>Illuminance:</span> Zero-Power Biophotonic</div>
+                        <div class="spec-item"><span>Species Diversity:</span> 1,200 Endemic Plants</div>
+                    </div>
+                </div>
+
+                <!-- Module 2: Air -->
+                <div class="matrix-card" data-zone="air">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Molecular Air Purification Spires">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // PURIFIED</div>
+                    <h3>Molecular Air Purification Spires</h3>
+                    <p>Massive crystalline towers stationed across every sector that ingest smog and particulate matter, breaking down pollutants at the molecular level and releasing pristine oxygen back into the atmosphere.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Filtration Rate:</span> 99.999% Particulates</div>
+                        <div class="spec-item"><span>Coverage:</span> 15 Square Kilometers/Spire</div>
+                        <div class="spec-item"><span>Output:</span> Medical-Grade Oxygen</div>
+                    </div>
+                </div>
+
+                <!-- Module 3: Water -->
+                <div class="matrix-card" data-zone="water">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Closed-Loop Hydro-Purification Basins">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // CLOSED-LOOP</div>
+                    <h3>Closed-Loop Hydro-Purification Basins</h3>
+                    <p>Advanced aquatic filtration canals that capture all urban runoff, greywater, and atmospheric condensation, filtering them through nano-porous membranes and mineralizing them instantly.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Recycling Efficiency:</span> 100.0%</div>
+                        <div class="spec-item"><span>Mineralization:</span> Natural Ion Balance</div>
+                        <div class="spec-item"><span>Discharge:</span> Zero Waste to Oceans</div>
+                    </div>
+                </div>
+
+                <!-- Module 4: Waste -->
+                <div class="matrix-card" data-zone="waste">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Sub-Surface Waste Digesters">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // ZERO-LANDFILL</div>
+                    <h3>Sub-Surface Sub-Atomic Waste Digesters</h3>
+                    <p>Automated pneumatic waste sorting tubes route all domestic refuse to underground bio-reactors where catalytic enzymes break down organic and synthetic material into pure agricultural nutrients.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Landfill Usage:</span> 0.00%</div>
+                        <div class="spec-item"><span>Conversion Time:</span> Under 4 Hours</div>
+                        <div class="spec-item"><span>Output:</span> Organic Fertilizer & Fuel</div>
+                    </div>
+                </div>
+
+                <!-- Module 5: Air -->
+                <div class="matrix-card" data-zone="air">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="Carbon-Negative Nano-Concrete Infrastructure">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // CARBON-NEGATIVE</div>
+                    <h3>Carbon-Negative Nano-Concrete Infrastructure</h3>
+                    <p>All roadways and structural foundations in NOVA are poured using proprietary nano-concrete that permanently sequesters CO<sub>2</sub> from the air, growing stronger over time through chemical mineralization.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Sequestration:</span> Permanent Mineral Lock</div>
+                        <div class="spec-item"><span>Durability:</span> 500+ Years Structural Life</div>
+                        <div class="spec-item"><span>Surface Temp:</span> Albedo-Optimized Cool</div>
+                    </div>
+                </div>
+
+                <!-- Module 6: Forests -->
+                <div class="matrix-card" data-zone="forests">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Elevated Wildlife Migration Corridors">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // CORRIDORS</div>
+                    <h3>Elevated Wildlife Migration Corridors</h3>
+                    <p>Green canopy bridges and suspended ecological highways connecting urban parks to surrounding nature reserves, ensuring safe unhindered passage for local fauna and pollinator populations.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Connectivity:</span> 100% Unfragmented Habitat</div>
+                        <div class="spec-item"><span>Acoustic Buffers:</span> Silent Composite Rails</div>
+                        <div class="spec-item"><span>Monitoring:</span> Non-Invasive AI Sensors</div>
+                    </div>
+                </div>
+
+                <!-- Module 7: Water -->
+                <div class="matrix-card" data-zone="water">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1519692933481-e162a57d6721?auto=format&fit=crop&w=800&q=80" alt="Atmospheric Moisture Harvesters">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // RETAINED</div>
+                    <h3>Atmospheric Moisture Harvesters</h3>
+                    <p>Porous architectural facades engineered to condense fog and humidity into pure drinking water, ensuring water self-sufficiency even during prolonged dry climate cycles.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Harvest Volume:</span> 2.5M Liters Daily</div>
+                        <div class="spec-item"><span>Energy Source:</span> Solar Skin Panels</div>
+                        <div class="spec-item"><span>Purity Level:</span> Pharmaceutical Grade</div>
+                    </div>
+                </div>
+
+                <!-- Module 8: Waste (Fixed Image Link) -->
+                <div class="matrix-card" data-zone="waste">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Molecular Polymer Disintegration Chambers">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // CIRCULAR</div>
+                    <h3>Molecular Polymer Disintegration Chambers</h3>
+                    <p>Advanced recycling nodes utilizing targeted frequency resonance to dissolve synthetic plastics and electronics back into their pristine constituent atomic elements for immediate manufacturing reuse.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Purity Recovery:</span> 99.8% Elemental</div>
+                        <div class="spec-item"><span>Processing Speed:</span> 500 kg/hour per node</div>
+                        <div class="spec-item"><span>Byproduct:</span> None</div>
+                    </div>
+                </div>
+
+                <!-- Module 9: Forests -->
+                <div class="matrix-card" data-zone="forests">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80" alt="Micro-Climate Regulation Canopies">
+                    </div>
+                    <div class="card-status eco-status">ECO-ACTIVE // THERMAL</div>
+                    <h3>Micro-Climate Regulation Canopies</h3>
+                    <p>Automated shading vines and mist-dispersing foliage arrays managed by environmental AI to naturally cool public plazas during peak summer heat without consuming fossil-fuel air conditioning.</p>
+                    <div class="spec-list">
+                        <div class="spec-item"><span>Temperature Drop:</span> 4°C to 7°C Local Cooling</div>
+                        <div class="spec-item"><span>Water Use:</span> Graywater Drip Fed</div>
+                        <div class="spec-item"><span>Shade Coverage:</span> 85% of Walkways</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Ecological Accordion Section -->
+    <section class="deep-specs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Environmental Equilibrium Protocols</h2>
+                <p class="section-subtitle">Click any protocol below to inspect core ecological safeguards.</p>
+            </div>
+
+            <div class="accordion-group">
+                <details class="accordion-item">
+                    <summary>Protocol Echo-1: Atmospheric Carbon Equilibrium Maintenance</summary>
+                    <div class="accordion-body">
+                        <p>Real-time atmospheric sensors continuously measure CO<sub>2</sub> concentration across all districts. If local density fluctuates above baseline threshold limits, regional air spires dynamically increase filtration cycles and deploy bio-nutrient feeds to vertical forests to accelerate carbon sequestration.</p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Protocol Echo-2: Biodiversity & Endemic Flora Preservation</summary>
+                    <div class="accordion-body">
+                        <p>NOVA's botanical grid is strictly curated to mirror pre-development native ecosystems. Genetic seed vaults maintain 10,000 regional plant species, protected by automated climate-controlled biospheres that shield flora from extreme meteorological shifts.</p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Protocol Echo-3: Zero-Emissions Public Transit Enforcement</summary>
+                    <div class="accordion-body">
+                        <p>Internal combustion engines are strictly prohibited within city limits. All transportation relies entirely on magnetic levitation, zero-point electrical propulsion, or pedestrian footpaths, ensuring absolute acoustic and chemical purity.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">N O V A</div>
+            <p>&copy; 2026 City of NOVA Project. Ecological & Environmental Framework.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech & Luxury</a>
+                <a href="environment.html">Environment</a>
+                <a href="roadmap.html">Roadmap</a>
+            </div>
+        </div>
+    </footer>
+<script src="environment.js"></script>
+</body>
+</html>

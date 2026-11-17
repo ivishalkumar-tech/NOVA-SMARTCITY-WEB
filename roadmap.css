@@ -1,0 +1,501 @@
+/* ==========================================
+   NOVA - Roadmap & Citizen Portal CSS (Fully Responsive)
+   ========================================== */
+
+:root {
+  --bg-deep: #040711;
+  --bg-surface: rgba(12, 20, 38, 0.72);
+  --bg-surface-hover: rgba(16, 28, 52, 0.9);
+  --border-glass: rgba(0, 255, 136, 0.18);
+  --border-cyan: rgba(0, 243, 255, 0.22);
+  --neon-emerald: #00ff88;
+  --neon-cyan: #00f3ff;
+  --text-main: #f4f7fb;
+  --text-muted: #94a3b8;
+  --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3, .logo-glow, .footer-logo, .timeline-phase {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   Animated Cyber Grid Background
+   ========================================== */
+.cyber-grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(0, 243, 255, 0.06) 0%, transparent 45%);
+  background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+  pointer-events: none;
+}
+
+/* ==========================================
+   Navigation Bar
+   ========================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(4, 7, 17, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.15rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-glow {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 14px rgba(0, 243, 255, 0.5);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--neon-emerald);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--neon-emerald);
+  box-shadow: 0 0 10px var(--neon-emerald);
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.roadmap-hero {
+  position: relative;
+  padding: 10rem 2rem 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.35);
+  border-radius: 50px;
+  color: var(--neon-emerald);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.roadmap-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.3rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--neon-emerald) 20%, var(--neon-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-hero p {
+  color: var(--text-muted);
+  font-size: 1.12rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   Timeline Section
+   ========================================== */
+.timeline-section {
+  padding: 3rem 0 5rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(0, 255, 136, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.38rem;
+  top: 0.2rem;
+  width: 16px;
+  height: 16px;
+  background: var(--bg-deep);
+  border: 2px solid var(--neon-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--neon-emerald);
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--neon-emerald);
+  transform: scale(1.2);
+}
+
+.timeline-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  padding: 1.8rem;
+  backdrop-filter: blur(14px);
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: var(--neon-emerald);
+  background: var(--bg-surface-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-phase {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--neon-cyan);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1.2px;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-scale {
+  font-size: 0.84rem;
+  color: var(--neon-emerald);
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 0.8rem;
+}
+
+/* ==========================================
+   Citizen Innovation Portal Form Section
+   ========================================== */
+.portal-section {
+  padding: 2rem 0 6rem;
+}
+
+.portal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-cyan);
+  border-radius: 18px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.innovation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(4, 7, 17, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--neon-emerald);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.25);
+}
+
+.submit-btn {
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--neon-emerald), var(--neon-cyan));
+  color: var(--bg-deep);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.35);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+}
+
+.form-success {
+  text-align: center;
+  padding: 2.5rem;
+  background: rgba(0, 255, 136, 0.08);
+  border: 1px solid var(--neon-emerald);
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.form-success h3 {
+  color: var(--neon-emerald);
+  margin-bottom: 0.5rem;
+}
+
+.form-success p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+  border-top: 1px solid var(--border-glass);
+  background: rgba(3, 5, 12, 0.92);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+}
+
+.footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.8rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--neon-emerald);
+}
+
+/* ==========================================
+   Responsive Adjustments for Mobile & Tablets
+   ========================================== */
+@media (max-width: 768px) {
+  .container, .nav-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .roadmap-hero {
+    padding: 8.5rem 1rem 3.5rem;
+  }
+
+  .hero-glow {
+    width: 320px;
+    height: 320px;
+  }
+
+  .portal-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .timeline-container {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: -1.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .roadmap-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .roadmap-hero p {
+    font-size: 1rem;
+  }
+
+  .portal-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+  }
+}

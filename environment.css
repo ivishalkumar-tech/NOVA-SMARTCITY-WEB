@@ -1,0 +1,586 @@
+/* --- Comprehensive Environment & Eco Stylesheet --- */
+/* ==========================================
+   NOVA - Ecological & Environmental Matrix CSS
+   ========================================== */
+
+:root {
+  --bg-deep: #040711;
+  --bg-surface: rgba(12, 20, 38, 0.72);
+  --bg-surface-hover: rgba(16, 28, 52, 0.9);
+  --border-glass: rgba(0, 255, 136, 0.18);
+  --border-cyan: rgba(0, 243, 255, 0.22);
+  --neon-emerald: #00ff88;
+  --neon-cyan: #00f3ff;
+  --text-main: #f4f7fb;
+  --text-muted: #94a3b8;
+  --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3, .logo-glow, .footer-logo, .aqi-number {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   Animated Cyber Grid Background
+   ========================================== */
+.cyber-grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(0, 243, 255, 0.06) 0%, transparent 45%);
+  background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
+  pointer-events: none;
+}
+
+/* ==========================================
+   Navigation Bar
+   ========================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(4, 7, 17, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.15rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-glow {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 14px rgba(0, 243, 255, 0.5);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--neon-emerald);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--neon-emerald);
+  box-shadow: 0 0 10px var(--neon-emerald);
+}
+
+/* ==========================================
+   Environment Hero Section
+   ========================================== */
+.env-hero {
+  position: relative;
+  padding: 10rem 2rem 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.35);
+  border-radius: 50px;
+  color: var(--neon-emerald);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.env-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.3rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--neon-emerald) 20%, var(--neon-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.env-hero p {
+  color: var(--text-muted);
+  font-size: 1.12rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   Live AQI & Pollution Tracking Banner
+   ========================================== */
+.aqi-banner-section {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.aqi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  background: rgba(10, 18, 34, 0.82);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.aqi-card {
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0.5rem;
+}
+
+.aqi-card:last-child {
+  border-right: none;
+}
+
+.aqi-number {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--neon-emerald);
+  text-shadow: 0 0 14px rgba(0, 255, 136, 0.35);
+  margin-bottom: 0.35rem;
+}
+
+.aqi-card:nth-child(even) .aqi-number {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 14px rgba(0, 243, 255, 0.35);
+}
+
+.aqi-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+/* ==========================================
+   Pure CSS Eco-Zone Filter Logic & Tabs
+   ========================================== */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.filter-input {
+  display: none;
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 3.2rem;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-cyan);
+  border-radius: 50px;
+  color: var(--text-muted);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+  border-color: var(--neon-emerald);
+}
+
+/* Active Tab Highlighting */
+#filter-all:checked ~ .filter-tabs label[for="filter-all"],
+#filter-forests:checked ~ .filter-tabs label[for="filter-forests"],
+#filter-air:checked ~ .filter-tabs label[for="filter-air"],
+#filter-water:checked ~ .filter-tabs label[for="filter-water"],
+#filter-waste:checked ~ .filter-tabs label[for="filter-waste"] {
+  background: var(--neon-emerald);
+  color: var(--bg-deep);
+  border-color: var(--neon-emerald);
+  font-weight: 700;
+  box-shadow: 0 0 22px rgba(0, 255, 136, 0.45);
+}
+
+/* Pure CSS Card Filtering Rules */
+#filter-forests:checked ~ .matrix-grid .matrix-card:not([data-zone="forests"]),
+#filter-air:checked ~ .matrix-grid .matrix-card:not([data-zone="air"]),
+#filter-water:checked ~ .matrix-grid .matrix-card:not([data-zone="water"]),
+#filter-waste:checked ~ .matrix-grid .matrix-card:not([data-zone="waste"]) {
+  display: none;
+}
+
+/* ==========================================
+   Ecological Matrix Cards Grid
+   ========================================== */
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.2rem;
+}
+
+.matrix-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.matrix-card:hover {
+  background: var(--bg-surface-hover);
+  border-color: var(--neon-emerald);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), 0 0 24px rgba(0, 255, 136, 0.14);
+}
+
+/* Bulletproof Image Box with Glowing Cyber Fallback */
+.card-image-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+  background: linear-gradient(135deg, rgba(0, 243, 255, 0.18), rgba(0, 255, 136, 0.08));
+  position: relative;
+}
+
+.card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.matrix-card:hover .card-image-box img {
+  transform: scale(1.06);
+}
+
+.eco-status {
+  padding: 1.2rem 1.8rem 0.4rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  color: var(--neon-emerald);
+  letter-spacing: 1.5px;
+}
+
+.matrix-card h3 {
+  padding: 0 1.8rem;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.matrix-card p {
+  padding: 0 1.8rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.spec-list {
+  margin: 0 1.8rem 1.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.spec-item {
+  font-size: 0.86rem;
+  color: var(--text-main);
+  display: flex;
+  justify-content: space-between;
+}
+
+.spec-item span {
+  color: var(--neon-cyan);
+  font-weight: 500;
+}
+
+/* ==========================================
+   Deep Ecological Accordion Section
+   ========================================== */
+.deep-specs-section {
+  padding: 4.5rem 0 5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.accordion-group {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.accordion-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-cyan);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.accordion-item[open] {
+  border-color: var(--neon-emerald);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.1);
+}
+
+.accordion-item summary {
+  padding: 1.35rem 1.8rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.98rem;
+  color: #ffffff;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  color: var(--neon-emerald);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item[open] summary::after {
+  content: '−';
+  color: var(--neon-cyan);
+}
+
+.accordion-body {
+  padding: 0 1.8rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.96rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1rem;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+  border-top: 1px solid var(--border-glass);
+  background: rgba(3, 5, 12, 0.92);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+}
+
+.footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.8rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--neon-emerald);
+}
+
+/* ==========================================
+   Responsive Adjustments for Mobile & Tablets
+   ========================================== */
+@media (max-width: 768px) {
+  .container, .aqi-banner-section, .nav-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .env-hero {
+    padding: 8.5rem 1rem 3.5rem;
+  }
+
+  .hero-glow {
+    width: 320px;
+    height: 320px;
+  }
+
+  .aqi-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-bottom: 1rem;
+  }
+
+  .aqi-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .env-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .env-hero p {
+    font-size: 1rem;
+  }
+
+  .matrix-card h3 {
+    font-size: 1.1rem;
+    padding: 0 1.2rem;
+  }
+
+  .matrix-card p, .eco-status, .spec-list {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .spec-list {
+    margin: 0 1.2rem 1.5rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+  }
+}
